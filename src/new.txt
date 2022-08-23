@@ -1,0 +1,14 @@
+Hola, también estoy usando su complemento PixelLogin, y su complemento es el mejor complemento de inicio de sesión disponible en spigot (sí, revisé muchos de ellos) y tengo algunas ideas para futuras actualizaciones:
+- Ocultar elementos en el inventario al iniciar sesión o cuando el jugador se está registrando
+- opciones para habilitar / deshabilitar congelación, efectos de pociones, barra de jefe y barra de acción
+- Corregir cuando el jugador se une por primera vez, no se teletransporta al mundo de inicio de sesión
+-% Intentos% no reemplaza el valor (https://prnt.sc/rtk4sv)
+- agregar captcha para registrarse
+- agregue un código de respaldo (si olvidó su contraseña, puede usarla una vez y cambiar su contraseña)
+- agregue un comando para activar el / pin (solo si el jugador quiere y no tiene el permiso del personal)
+
+¡Creo que eso es todo! Gracias por tu increíble complemento: D
+
+Y también un comando para deshabilitar el inicio de sesión automático premium (si el jugador lo desea).
+
+Espero que les gusten mis ideas, ¡sigan así hermano!

@@ -1,0 +1,104 @@
+####################################################################################################
+# +----------------------------------------------------------------------------------------------+ #
+# |                                                                                              | #
+# |        ██▓███   ██▓▒██   ██▒▓█████  ██▓     ██▓     ▒█████    ▄████  ██▓ ███▄    █           | #
+# |       ▓██░  ██▒▓██▒▒▒ █ █ ▒░▓█   ▀ ▓██▒    ▓██▒    ▒██▒  ██▒ ██▒ ▀█▒▓██▒ ██ ▀█   █           | #
+# |       ▓██░ ██▓▒▒██▒░░  █   ░▒███   ▒██░    ▒██░    ▒██░  ██▒▒██░▄▄▄░▒██▒▓██  ▀█ ██▒          | #
+# |       ▒██▄█▓▒ ▒░██░ ░ █ █ ▒ ▒▓█  ▄ ▒██░    ▒██░    ▒██   ██░░▓█  ██▓░██░▓██▒  ▐▌██▒          | #
+# |       ▒██▒ ░  ░░██░▒██▒ ▒██▒░▒████▒░██████▒░██████▒░ ████▓▒░░▒▓███▀▒░██░▒██░   ▓██░          | #
+# |       ▒▓▒░ ░  ░░▓  ▒▒ ░ ░▓ ░░░ ▒░ ░░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░  ░▒   ▒ ░▓  ░ ▒░   ▒ ▒           | #
+# |       ░▒ ░      ▒ ░░░   ░▒ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ░   ░  ▒ ░░ ░░   ░ ▒░          | #
+# |       ░░        ▒ ░ ░    ░     ░     ░ ░     ░ ░   ░ ░ ░ ▒  ░ ░   ░  ▒ ░   ░   ░ ░           | #
+# |                 ░   ░    ░     ░  ░    ░  ░    ░  ░    ░ ░        ░  ░           ░           | #
+# |                                                                                              | #
+# |                                                                                              | #
+# |  WIKI:        https://pedrojm96.com/minecraft-plugin/pixellogin/                             | #
+# |  BUG REPORTS: https://www.spigotmc.org/threads/pixellogin.358195/                            | #
+# |  AUTHOR: PedroJM96 (pedrojm96.com)                                                           | #
+# |  OFFICIAL SERVER: mc.mundopixels.net                                                         | #
+# |                                                                                              | #
+# +----------------------------------------------------------------------------------------------+ #
+# +----------------------------------------------------------------------------------------------+ #
+# | For a detailed explanation of the configuration see this page.                               | #
+# | https://pedrojm96.com/minecraft-plugin/pixellogin/pl-config-bungee-yml/                      | #
+# +----------------------------------------------------------------------------------------------+ #
+####################################################################################################
+
+#Only for developers, do not modify.
+debug: false
+
+#Check for updates.
+update-check: true
+
+#The prefix that the plugin will show in the messages.
+prefix: '&fPixelLogin &8> '
+
+# - Possible options: pluginmsg, rabbitmq
+messaging-service: pluginmsg
+
+#The language of the plugin messages (EN, ES).
+messages: 'EN'
+
+#Encryption method used for the password and the pin code. (MD5, SHA256, SHA512).
+encryption-method: 'MD5'
+
+captcha-code: false
+
+#Name of the server where the player will be sent.
+lobby-server:
+  enable: false
+  name: "lobby"
+
+#Name of the server where the player will be sent.
+auth-server:
+  enable: false
+  name: "auth"
+
+#To activate the automatic login for premium users. 
+premium-auto-login: false
+
+#To activate the automatic pin for premium users.
+#Requires the plugin installed on the bukkit/spigot server simultaneously with BungeeCord.
+premium-auto-pin: false
+
+#To force the staff members with "pixellogin.staff" permission to place the pin code after starting session for security.
+#Requires the plugin installed on the bukkit/spigot server simultaneously with BungeeCord.
+ping-code-staff: true
+
+#To activate the double security system with the pin after starting the session for all users.
+#Requires the plugin installed on the bukkit/spigot server simultaneously with BungeeCord.
+ping-code-all-users: false
+
+#Maximum limit of accounts that can be registered with an ip.
+max-ip-accounts: 1
+
+#The session for a loop time, non-premium users do not have to log in again.
+#type: (SECONDS, MINUTES, DAYS)
+session:
+  enable: true
+  session-pin: true
+  type: 'MINUTES'
+  time: 5
+
+#The wait time for the player to log into the network.
+#type: (SECONDS, MINUTES)
+timeout:
+  enable: true
+  type: 'SECONDS'
+  time: 20
+
+#Configuration of the database. suports only MySQL
+data-storage:
+  enable: false
+  host: 'localhost'
+  port: 3306
+  database: minecraft
+  username: root
+  password: 1234
+rabbitmq:
+  enable: false
+  host: 'localhost'
+  virtual-host: '/'
+  port: 5672
+  username: guest
+  password: guest

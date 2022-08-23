@@ -1,0 +1,137 @@
+﻿already-logged-in: "&cOtro usuario con la misma cuenta ya ha iniciado sesión."
+you-already-logged-in: "&7Ya has iniciado sesión."
+pin-code-staff-register: "&7Hemos detectado que usted es un usuario del staff, por favor registre su codigo pin con el comando /pin."
+pin-code-user-register: "&7Este servidor usa una segunda capa de proteccion en el inicio de sesion con el codigo pin, por favor registre su codigo pin con el comando /pin."
+cracked-player-already-registered: "&cEl nombre de usuario ya está registrado como usuario no premium."
+premium-invalid-session: "&cSession invalida, este usuario esta registrado como premium."
+auto-premium-login: "&7Inicio de sesión premium automatica."
+session-restored: "&7Tu sesión ha sido restaurada automaticamente."
+kick-timeout: "&cTiempo de espera para el inicio de sesión agotado."
+player-invalid-name: "&cTu nombre contiene caracteres inválidos."
+
+login: "&7Por favor inicie sesión usando &9/login <clave>"
+login-success: "&7Has iniciado sesión correctamente."
+login-failed: "&7Contraseña incorrecta"
+register: "&7Por favor regístrese con &9/register <clave>"
+register-success: "&7¡Registrado exitosamente!"
+
+token-error: "&cTienes que unirte a través del proxy."
+
+unregister-success: "&7Cuenta borrada exitosamente!"
+changepassword-success: "&7Contraseña cambiada exitosamente!"
+
+login-bossbar: "&5&lBienvenido. Inicia sesión con &6/login <clave> &5&len el chat."
+login-title: "&cPor favor Iniciar sesión"
+login-subtitle: "&6Inicia sesión con /login <clave> en el chat"
+login-failed-title: "&cContraseña incorrecta"
+login-failed-subtitle: "&7Tienes &c%Attempts% &7intentos restantes."
+login-success-title: "&aHa iniciado sesión correctamente"
+login-success-subtitle: "&7Puedes jugar ahora"
+register-bossbar: "&5&lBienvenido. Registrate con &6/register <clave> &5&len el chat."
+register-title: "&cPor favor regístrese"
+register-subtitle: "&6Registrate con /register <clave> en el chat"
+register-success-title: "&a¡Registrado exitosamente!"
+register-success-subtitle: "&6Su cuenta ha sido registrada con éxito"
+auto-premium-login-title: "&bPREMIUM"
+auto-premium-login-subtitle: "&aHa iniciado sesión correctamente"
+
+error-no-console: "&7No disponible en la consola."
+error-no-command: "&7Ese comando no está disponible."
+error-no-permission: "&7No tiene permiso para utilizar este comando."
+error-already-pin: "&7Ya tienes registrado un código pin."
+error-already-registered: "&7Vaya, parece que ya estás registrado."
+
+error-player-already-registered: "&7Ese jugador ya está registrado."
+error-mojangapi-shutdown: "&7No se pudo comprobar si el jugador tiene una cuenta premium, MojangAPI está apagado!"
+error-registration-not-found: "El registro del jugador no se encuentra en la base de datos."
+
+error-max-multi-accounts: "Esa dirección ip ha sobrepasado el maximo de cuentas registradas."
+
+command-register-use: "&7Usa &9/register <clave>"
+command-login-use: "&7Usa &9/login <clave>"
+command-changepassword-use: "&7Usa &9/changepassword <newpassword>"
+
+command-pixellogin-use: "&7Usa &9/pixellogin help | ?"
+command-pixellogin-register-use: "&7Usa &9/pixellogin register <playername> <password>"
+command-pixellogin-unregister-use: "&7Usa &9/pixellogin unregister <playername>"
+
+help-command-pixellogin-register: "&7[&8&l>&7] &9/pixellogin register <playername> <password>"
+help-description-pixellogin-register: "&7[&8&l-&7] &7Registra la cuenta de un jugador."
+
+help-command-pixellogin-register: "&7[&8&l>&7] &9/pixellogin register <playername> <password>"
+help-description-pixellogin-register: "&7[&8&l-&7] &7Registra la cuenta de un jugador."
+
+help-command-pixellogin-cracked: "&7[&8&l>&7] &9/pixellogin cracked <playername>"
+help-description-pixellogin-cracked: "&7[&8&l-&7] &7Cambia la cuenta de un jugador a cracked."
+
+help-command-pixellogin-premium: "&7[&8&l>&7] &9/pixellogin premium <playername>"
+help-description-pixellogin-premium: "&7[&8&l-&7] &7Cambia la cuenta de un jugador a premium."
+
+
+help-command-pixellogin-info: "&7[&8&l>&7] &9/pixellogin info <playername>"
+help-description-pixellogin-info: "&7[&8&l-&7] &7Mira los datos de la cuenta de un jugador."
+
+help-command-pixellogin-accounts: "&7[&8&l>&7] &9/pixellogin accounts <playername>"
+help-description-pixellogin-accounts: "&7[&8&l-&7] &7Mira la lista de cuentas registradas de un jugador."
+
+
+pin-backspace: "&cRetroceso"
+pin-ok: "&6OK"
+pin-code-menu: "&8Codigo Pin"
+pin-code-register-success: "&7Código registrado con éxito."
+pin-code-login: "&7Por favor coloque su código pin con el comando /pin."
+pin-code-login-actionbar: "&6Por favor coloque su código pin con el comando &b/pin."
+pin-code-login-success: "&7Código pin exitoso."
+pin-code-failed: "&7Código pin incorrecto."
+pin-code-null: "&7Debe establecer un código pin valido."
+pins-numbers:
+  0: "&a0"
+  1: "&a1"
+  2: "&a2"
+  3: "&a3"
+  4: "&a4"
+  5: "&a5"
+  6: "&a6"
+  7: "&a7"
+  8: "&a8"
+  9: "&a9"
+
+command-pixellogin-cracked-use: "&7Usa &9/pixellogin cracked <playername>"
+cracked-success: "&7¡Cuenta cambiada a cracked correctamente!"
+cracked-changed: "&7Su cuenta fue cambiada a cracked."
+
+command-pixellogin-premium-use: "&7Usa &9/pixellogin premium <playername>"
+player-no-premium: "&cEl nombre del jugador no es de un usuario premium."
+premium-success: "&7¡Cuenta cambiada a premium correctamente!"
+premium-changed: "&7Su cuenta fue cambiada a premium."
+
+command-pixellogin-info-use: "&7Usa &9/pixellogin info <playername>"
+
+command-pixellogin-accounts-use: "&7Usa &9/pixellogin accounts <playername>"
+
+command-info-list:
+- '&8&m---------------------------------------------------'
+- "&7[&8&l-&7] &9Nombre: &8<playername>" 
+- "&7[&8&l-&7] &9UUID: &8<uuid>"
+- "&7[&8&l-&7] &9Premium: &8<premium>"
+- "&7[&8&l-&7] &9IP: &8<ip>"
+- "&7[&8&l-&7] &9Último acceso: &8<lastlogin>"
+- "&7[&8&l-&7] &9Última desconexión: &8<lastdisconnected>"
+- '&8&m---------------------------------------------------'
+
+command-accounts-list:
+- '&8&m---------------------------------------------------'
+- "&7[&8&l-&7] &9Nombre: &8<playername>"
+- "&7[&8&l-&7] &9IP: &8<ip>"
+- "&7[&8&l-&7] &9Cuentas:"
+- "<list> &9----> &8[&a<#>&8] - &9<playername>&8: <uuid>"
+- '&8&m---------------------------------------------------'
+
+captcha: "&7Por favor coloca en el chat el código captcha que ve en el mapa."
+no-captcha-code: "&7El codigo del captcha no es correcto, intente de nuevo."
+captcha-checked: "&7Codigo captcha verificado correctamente, ahora puede registrarse."
+
+captcha-checked-title: "&aVerificado"
+captcha-checked-subtitle: "&eAhora puede registrarse."
+
+captcha-code-register: "&7Debe verificar el código captcha primero para poder registrarse."

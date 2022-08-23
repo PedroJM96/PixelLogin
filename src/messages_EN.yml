@@ -1,0 +1,138 @@
+﻿already-logged-in: "&cAnother User with the same Account is already logged in."
+you-already-logged-in: "You have already logged in."
+pin-code-staff-register: "&7We have detected that you are a staff member, please register your pin code with the /pin command."
+pin-code-user-register: "&7This server uses a second layer of protection at the start of the session with the pin code, please register your pin code with the /pin command."
+cracked-player-already-registered: "&cThe username is already registered as a non-premium user."
+premium-invalid-session: "&cSession invalid, this user is registered as premium."
+auto-premium-login: "&7Automatic premium login."
+session-restored: "&7Your session has been restored automatically."
+kick-timeout: "&cTimed out to login."
+player-invalid-name: "&cYour name contains invalid characters."
+
+login: "&7Please login using &9/login <password>"
+login-success: "&7You have successfully logged in."
+login-failed: "&7Incorrect password."
+register: "&7Please register with &9/register <clave>"
+register-success: "&7Registered successfully!"
+
+token-error: "&cYou have to join through the proxy."
+
+unregister-success: "&7Account deleted successfully!"
+changepassword-success: "&7Password changed successfully!"
+
+login-bossbar: "&5&lWelcome. Login with &6/login <password> &5&lin the chat."
+login-title: "&cPlease log in"
+login-subtitle: "&6Login with /login <password> in the chat."
+login-failed-title: "&cIncorrect Password"
+login-failed-subtitle: "&7You have &c%Attempts% &7Attempts left."
+login-success-title: "&aSuccessfully logged in"
+login-success-subtitle: "&7You can play now"
+register-bossbar: "&5&lWelcome. Register with &6/register <password> &5&lin the chat."
+register-title: "&cPlease register"
+register-subtitle: "&6Register with /register <password> in the chat"
+register-success-title: "&aSuccessfully registered!"
+register-success-subtitle: "&6Your Account has successfully been registered"
+auto-premium-login-title: "&bPREMIUM"
+auto-premium-login-subtitle: "&aSuccessfully logged in"
+
+error-no-console: "&7Not available in the console."
+error-no-command: "&7This command is not available."
+error-no-permission: "&7You not have permission to use this command."
+error-already-pin: "&7You already have a pin code registered."
+error-already-registered: "&7Oops, it seems that you are already registered."
+
+error-player-already-registered: "&7That player is already registered."
+error-mojangapi-shutdown: "&7Failed to check if player has a paid account, MojangAPI is shutdown!"
+
+error-registration-not-found: "&7Player registration not found in the database."
+
+error-max-multi-accounts: "&7That ip address has exceeded the maximum number of registered accounts."
+
+command-register-use: "&7Use &9/register <password>"
+command-login-use: "&7Use &9/login <password>"
+command-changepassword-use: "&7Use &9/changepassword <newpassword>"
+
+command-pixellogin-use: "&7Use &9/pixellogin help | ?"
+command-pixellogin-register-use: "&7Use &9/pixellogin register <playername> <password>"
+command-pixellogin-unregister-use: "&7Use &9/pixellogin unregister <playername>"
+
+help-command-pixellogin-register: "&7[&8&l>&7] &9/pixellogin register <playername> <password>"
+help-description-pixellogin-register: "&7[&8&l-&7] &7Register a players account."
+
+help-command-pixellogin-unregister: "&7[&8&l>&7] &9/pixellogin unregister <playername>"
+help-description-pixellogin-unregister: "&7[&8&l-&7] &7Delete a players account."
+
+help-command-pixellogin-cracked: "&7[&8&l>&7] &9/pixellogin cracked <playername>"
+help-description-pixellogin-cracked: "&7[&8&l-&7] &7Change a player's account to cracked."
+
+help-command-pixellogin-premium: "&7[&8&l>&7] &9/pixellogin premium <playername>"
+help-description-pixellogin-premium: "&7[&8&l-&7] &7Change a player's account to premium."
+
+help-command-pixellogin-info: "&7[&8&l>&7] &9/pixellogin info <playername>"
+help-description-pixellogin-info: "&7[&8&l-&7] &7View a player's account details."
+
+help-command-pixellogin-accounts: "&7[&8&l>&7] &9/pixellogin accounts <playername>"
+help-description-pixellogin-accounts: "&7[&8&l-&7] &7Look at the list of registered player accounts."
+
+pin-backspace: "&cBackspace"
+pin-ok: "&6OK"
+pin-code-menu: "&8Pin code"
+pin-code-register-success: "&7Successfully registered code."
+pin-code-login: "&7Please put your pin code with the /pin command."
+pin-code-login-actionbar: "&6Please put your pin code with the &b/pin &6command."
+pin-code-login-success: "&7Successful pin code."
+pin-code-failed: "&7Incorrect pin code."
+pin-code-null: "&7You must establish a valid pin code."
+pins-numbers:
+  0: "&a0"
+  1: "&a1"
+  2: "&a2"
+  3: "&a3"
+  4: "&a4"
+  5: "&a5"
+  6: "&a6"
+  7: "&a7"
+  8: "&a8"
+  9: "&a9"
+
+command-pixellogin-cracked-use: "&7Use &9/pixellogin cracked <playername>"
+cracked-success: "&7Account changed to cracked successfully!"
+cracked-changed: "&7Your account was changed to cracked."
+
+command-pixellogin-premium-use: "&7Usa &9/pixellogin premium <playername>"
+player-no-premium: "&cThe player's name is not that of a premium user."
+
+premium-success: "&7Account changed to premium successfully!"
+premium-changed: "&7Your account was changed to premium."
+
+command-pixellogin-info-use: "&7Use &9/pixellogin info <playername>"
+
+command-pixellogin-accounts-use: "&7Use &9/pixellogin accounts <playername>"
+
+command-info-list:
+- '&8&m---------------------------------------------------'
+- "&7[&8&l-&7] &9Name: &8<playername>" 
+- "&7[&8&l-&7] &9UUID: &8<uuid>"
+- "&7[&8&l-&7] &9Premium: &8<premium>"
+- "&7[&8&l-&7] &9IP: &8<ip>"
+- "&7[&8&l-&7] &9Last Login: &8<lastlogin>"
+- "&7[&8&l-&7] &9Last Disconnected: &8<lastdisconnected>"
+- '&8&m---------------------------------------------------'
+
+command-accounts-list:
+- '&8&m---------------------------------------------------'
+- "&7[&8&l-&7] &9Name: &8<playername>"
+- "&7[&8&l-&7] &9IP: &8<ip>"
+- "&7[&8&l-&7] &9Accounts:"
+- "<list> &9----> &8[&a<#>&8] - &9<playername>&8: <uuid>"
+- '&8&m---------------------------------------------------'
+
+captcha: "&7Please enter the captcha code you see on the map in the chat."
+no-captcha-code: "&7The captcha code is not correct, please try again."
+
+captcha-checked: "&7Captcha code checked successfully, now you can register."
+
+captcha-checked-title: "&aChecked"
+captcha-checked-subtitle: "&eYou can now register."
+
+captcha-code-register: "&7You must verify the captcha code first in order to register."

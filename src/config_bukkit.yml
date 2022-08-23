@@ -1,0 +1,78 @@
+####################################################################################################
+# +----------------------------------------------------------------------------------------------+ #
+# |                                                                                              | #
+# |        ██▓███   ██▓▒██   ██▒▓█████  ██▓     ██▓     ▒█████    ▄████  ██▓ ███▄    █           | #
+# |       ▓██░  ██▒▓██▒▒▒ █ █ ▒░▓█   ▀ ▓██▒    ▓██▒    ▒██▒  ██▒ ██▒ ▀█▒▓██▒ ██ ▀█   █           | #
+# |       ▓██░ ██▓▒▒██▒░░  █   ░▒███   ▒██░    ▒██░    ▒██░  ██▒▒██░▄▄▄░▒██▒▓██  ▀█ ██▒          | #
+# |       ▒██▄█▓▒ ▒░██░ ░ █ █ ▒ ▒▓█  ▄ ▒██░    ▒██░    ▒██   ██░░▓█  ██▓░██░▓██▒  ▐▌██▒          | #
+# |       ▒██▒ ░  ░░██░▒██▒ ▒██▒░▒████▒░██████▒░██████▒░ ████▓▒░░▒▓███▀▒░██░▒██░   ▓██░          | #
+# |       ▒▓▒░ ░  ░░▓  ▒▒ ░ ░▓ ░░░ ▒░ ░░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░  ░▒   ▒ ░▓  ░ ▒░   ▒ ▒           | #
+# |       ░▒ ░      ▒ ░░░   ░▒ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ░   ░  ▒ ░░ ░░   ░ ▒░          | #
+# |       ░░        ▒ ░ ░    ░     ░     ░ ░     ░ ░   ░ ░ ░ ▒  ░ ░   ░  ▒ ░   ░   ░ ░           | #
+# |                 ░   ░    ░     ░  ░    ░  ░    ░  ░    ░ ░        ░  ░           ░           | #
+# |                                                                                              | #
+# |                                                                                              | #
+# |  WIKI:        https://pedrojm96.com/minecraft-plugin/pixellogin/                             | #
+# |  BUG REPORTS: https://www.spigotmc.org/threads/pixellogin.358195/                            | #
+# |  AUTHOR: PedroJM96 (pedrojm96.com)                                                           | #
+# |  OFFICIAL SERVER: mc.mundopixels.net                                                         | #
+# |                                                                                              | #
+# +----------------------------------------------------------------------------------------------+ #
+# +----------------------------------------------------------------------------------------------+ #
+# | For a detailed explanation of the configuration see this page.                               | #
+# |  https://pedrojm96.com/minecraft-plugin/pixellogin/pl-config-bukkit-yml/                     | #
+# +----------------------------------------------------------------------------------------------+ #
+####################################################################################################
+
+#Only for developers, do not modify.
+debug: false
+
+#Check for updates.
+update-check: true
+
+server-name: none
+
+# - Possible options: pluginmsg, rabbitmq
+messaging-service: pluginmsg
+
+#To clean the chat when entering the server.
+join-clear-chat: true
+
+sound:
+  enable: true
+  register-command: LEVEL_UP
+  login-command-success: BURP
+  login-command-failed: ANVIL_LAND
+  pin-command: ITEM_PICKUP
+  pin-menu: CLICK
+  pin-menu-success: ORB_PICKUP
+  pin-menu-failed: ANVIL_LAND
+  captcha-checked: BURP
+
+#Where will send the player after login on the server.
+#Name of the world where the player will be sent.
+lobby-world:
+  enable: false
+  name: "lobby"
+  
+#What world will send the player to login to the server.
+#Name of the world where the player will be sent.
+auth-world:
+  enable: false
+  name: "auth"
+  
+#Configuration of the database. suports only MySQL
+data-storage:
+  enable: false
+  host: 'localhost'
+  port: 3306
+  database: minecraft
+  username: root
+  password: 1234
+rabbitmq:
+  enable: false
+  host: 'localhost'
+  virtual-host: '/'
+  port: 5672
+  username: guest
+  password: guest

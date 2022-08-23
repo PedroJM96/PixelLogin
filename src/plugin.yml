@@ -1,0 +1,13 @@
+name: PixelLoginBukkit
+version: 2.0.7
+main: com.pedrojm96.pixellogin.bukkit.PixelLoginBukkit
+api-version: 1.13
+description: Advanced login plugin for cracked servers.
+maintainer: PedroJM96
+authors: [PedroJM96]
+website: https://www.spigotmc.org/resources/
+commands:
+    pin:
+        usage: /<command>
+        aliases: [pi]
+        description: Login Plugin.
