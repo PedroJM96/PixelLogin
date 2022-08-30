@@ -4,7 +4,7 @@
   <groupId>com.pedrojm96</groupId>
   <artifactId>PixelLogin</artifactId>
   <name>PixelLogin</name>
-  <version>2.0.7</version>
+  <version>2.0.9</version>
   <description>Advanced login plugin for cracked servers.</description>
   <build>
     <sourceDirectory>src</sourceDirectory>
@@ -39,15 +39,31 @@
               <relocations>
                 <relocation>
                   <pattern>com.pedrojm96.core</pattern>
-                  <shadedPattern>com.pedrojm96.pixellogin.bukkit</shadedPattern>
+                  <shadedPattern>com.pedrojm96.pixellogin</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>org.bstats</pattern>
-                  <shadedPattern>com.pedrojm96.playeroptions.libs.org.bstats</shadedPattern>
+                  <shadedPattern>com.pedrojm96.pixellogin.libs.org.bstats</shadedPattern>
                 </relocation>
                 <relocation>
-                  <pattern>net.byteflux.libby</pattern>
-                  <shadedPattern>com.pedrojm96.playeroptions.libs.net.byteflux.libby</shadedPattern>
+                  <pattern>com.zaxxer</pattern>
+                  <shadedPattern>com.pedrojm96.pixellogin.libs.com.zaxxer</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.slf4j</pattern>
+                  <shadedPattern>com.pedrojm96.pixellogin.libs.org.slf4j</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.commons</pattern>
+                  <shadedPattern>com.pedrojm96.pixellogin.libs.org.apache.commons</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.google.gson</pattern>
+                  <shadedPattern>com.pedrojm96.pixellogin.libs.com.google.code.gson</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.rabbitmq</pattern>
+                  <shadedPattern>com.pedrojm96.pixellogin.libs.com.rabbitmq</shadedPattern>
                 </relocation>
               </relocations>
               <filters>
@@ -117,24 +133,6 @@
       <artifactId>bungeecord-api</artifactId>
       <version>1.18-R0.1-SNAPSHOT</version>
       <type>javadoc</type>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.zaxxer</groupId>
-      <artifactId>HikariCP</artifactId>
-      <version>3.4.1</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>1.7.25</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.rabbitmq</groupId>
-      <artifactId>amqp-client</artifactId>
-      <version>5.10.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

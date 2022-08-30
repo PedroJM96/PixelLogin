@@ -28,8 +28,6 @@ import com.pedrojm96.pixellogin.bungee.commands.subcommands.PremiumPixelLogin;
 import com.pedrojm96.pixellogin.bungee.commands.subcommands.RegisterPixelLogin;
 import com.pedrojm96.pixellogin.bungee.commands.subcommands.UnRegisterPixelLogin;
 
-import net.byteflux.libby.BungeeLibraryManager;
-import net.byteflux.libby.Library;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.api.plugin.PluginManager;
 
@@ -74,105 +72,13 @@ public class PixelLoginBungee extends Plugin implements CorePlugin{
 	}
 	
 	
-	
-	public void loadDependencies(){
-		this.log.info("Loading Libraries...");
-		 BungeeLibraryManager bukkitLibraryManager = new BungeeLibraryManager(this);
-			Library commons_lang_2_6 = Library.builder()
-				    .groupId("commons-lang") // "{}" is replaced with ".", useful to avoid unwanted changes made by maven-shade-plugin
-				    .artifactId("commons-lang")
-				    .version("2.6")
-				     // The following are optional
 
-				     // Sets an id for the library
-				    .id("commons-lang-2-6")
-				    .isolatedLoad(true)
-				    .build();
-			Library commons_codec_1_15 = Library.builder()
-				    .groupId("commons-codec") // "{}" is replaced with ".", useful to avoid unwanted changes made by maven-shade-plugin
-				    .artifactId("commons-codec")
-				    .version("1.15")
-				     // The following are optional
-
-				     // Sets an id for the library
-				    .id("commons-codec-1-15")
-				    .isolatedLoad(true)
-				    .build();
-			Library com_google_code_gson_2_9_0 = Library.builder()
-				    .groupId("com{}google{}code{}gson") // "{}" is replaced with ".", useful to avoid unwanted changes made by maven-shade-plugin
-				    .artifactId("gson")
-				    .version("2.9.0")
-				     // The following are optional
-
-				     // Sets an id for the library
-				    .id("com-google-code-gson-2-9-0")
-				    .isolatedLoad(true)
-				    .build();
-			Library org_slf4j_api_1_7_25 = Library.builder()
-				    .groupId("org{}slf4j") // "{}" is replaced with ".", useful to avoid unwanted changes made by maven-shade-plugin
-				    .artifactId("slf4j-api")
-				    .version("1.7.25")
-				     // The following are optional
-
-				     // Sets an id for the library
-				    .id("org-slf4j-api-1-7-25")
-				    .isolatedLoad(true)
-				    .build();
-			Library org_slf4j_simple_1_7_25 = Library.builder()
-				    .groupId("org{}slf4j") // "{}" is replaced with ".", useful to avoid unwanted changes made by maven-shade-plugin
-				    .artifactId("slf4j-simple")
-				    .version("1.7.25")
-				     // The following are optional
-
-				     // Sets an id for the library
-				    .id("org-slf4j-simple-1-7-25")
-				    .isolatedLoad(true)
-				    .build();
-			Library com_zaxxer_hikaricp_3_4_1 = Library.builder()
-				    .groupId("com{}zaxxer") // "{}" is replaced with ".", useful to avoid unwanted changes made by maven-shade-plugin
-				    .artifactId("HikariCP")
-				    .version("3.4.1")
-				     // The following are optional
-
-				     // Sets an id for the library
-				    .id("com-zaxxer-hikaricp-3-4-1")
-				    .isolatedLoad(true)
-				    .build();
-			
-			Library com_rabbitmq_amqp_client_5_10_0 = Library.builder()
-				    .groupId("com{}rabbitmq") // "{}" is replaced with ".", useful to avoid unwanted changes made by maven-shade-plugin
-				    .artifactId("amqp-client")
-				    .version("5.10.0")
-				     // The following are optional
-
-				     // Sets an id for the library
-				    .id("com-rabbitmq-amqp-client-5-10-0")
-				    .isolatedLoad(true)
-				    .build();
-			bukkitLibraryManager.addMavenCentral();
-			bukkitLibraryManager.loadLibrary(commons_lang_2_6);
-			bukkitLibraryManager.loadLibrary(commons_codec_1_15);
-			bukkitLibraryManager.loadLibrary(com_google_code_gson_2_9_0);
-			bukkitLibraryManager.loadLibrary(org_slf4j_simple_1_7_25);
-			bukkitLibraryManager.loadLibrary(com_zaxxer_hikaricp_3_4_1);
-			bukkitLibraryManager.loadLibrary(org_slf4j_api_1_7_25);
-			bukkitLibraryManager.loadLibrary(com_rabbitmq_amqp_client_5_10_0);
-	 }
 	
 	
 	public void onEnable() {
-		
-		this.log = new CoreLog(this,CoreLog.Color.WHITE);
+		this.log = new CoreLog(this,"PixelLogin",CoreLog.Color.WHITE);
 		banner();
 		this.log.info("Plugin Create by PedroJM96.");
-		loadDependencies();
-		try {
-		   //Ponemos a "Dormir" el programa durante los ms que queremos
-		   Thread.sleep(1*1000);
-		}
-		catch (Exception e) {
-		   System.out.println(e);
-		}
 		this.log.info("Register commands...");
 		PluginManager pluginManager = getProxy().getPluginManager();
 		pluginManager.registerCommand(this, new CommandsRegister(this,"register",new String[] {"reg"}));
