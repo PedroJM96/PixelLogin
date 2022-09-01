@@ -4,7 +4,7 @@
   <groupId>com.pedrojm96</groupId>
   <artifactId>PixelLogin</artifactId>
   <name>PixelLogin</name>
-  <version>2.1.0</version>
+  <version>2.1.1</version>
   <description>Advanced login plugin for cracked servers.</description>
   <build>
     <sourceDirectory>src</sourceDirectory>

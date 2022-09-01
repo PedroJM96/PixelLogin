@@ -76,6 +76,7 @@ public class PixelLoginBungee extends Plugin implements CorePlugin{
 	
 	
 	public void onEnable() {
+		this.plugin = this;
 		this.log = new CoreLog(this,"PixelLogin",CoreLog.Color.WHITE);
 		banner();
 		this.log.info("Plugin Create by PedroJM96.");
