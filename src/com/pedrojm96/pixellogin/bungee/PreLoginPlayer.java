@@ -31,6 +31,7 @@ public class PreLoginPlayer {
 	
 	
 	
+	@SuppressWarnings("deprecation")
 	public boolean isMaxIP() {
 		List<HashMap<String, String>> playersips = plugin.data.getAll(CoreSQL.WHERE("ip:"+pendingConnection.getAddress().getAddress().getHostAddress()), "order by ip DESC limit 20", "name","uuid");
 		int ips = 0;
@@ -64,6 +65,7 @@ public class PreLoginPlayer {
 		return this.premiun;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void loadNewCrackeProfile() {
 		this.premiun = false;
 		plugin.log.debug("* ["+pendingConnection.getName()+"] - El jugador no es premiun, se registran datos temporales del nuevo jugador no premiun...");
@@ -78,6 +80,7 @@ public class PreLoginPlayer {
 		plugin.log.info("["+pendingConnection.getName()+"]"+(premiun?"[PREMIUM]":"[NO-PREMIUM]")+" "+playerUUID.toString());
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void loadNewPremiunProfile(MojangProfile profile) {
 		this.premiun = profile.isPremiun();
 		plugin.log.debug("* ["+pendingConnection.getName()+"] - No esta registrado con otro nombre, es un jugador premiun nuevo, se registran los dato temporales del nuevo jugador...");

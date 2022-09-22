@@ -21,7 +21,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.map.MapRenderer;
 import org.bukkit.map.MapView;
 
-import com.pedrojm96.core.CoreUtils;
+import com.pedrojm96.core.CoreVersion;
 import com.pedrojm96.core.bungee.CoreColor;
 
 public class Captcha{
@@ -116,7 +116,7 @@ public class Captcha{
 	}
 	
 	public void setItemInHand(ItemStack item) {
-		if(CoreUtils.Version.getVersion().esMayorIgual(CoreUtils.Version.v1_9)) {
+		if(CoreVersion.getVersion().esMayorIgual(CoreVersion.v1_9)) {
 			this.setItemInHand_1_9(item);
 		}else {
 			this.setItemInHand_1_8(item);
@@ -125,7 +125,7 @@ public class Captcha{
 	
 	
 	public ItemStack getItemInHand() {
-		if(CoreUtils.Version.getVersion().esMayorIgual(CoreUtils.Version.v1_9)) {
+		if(CoreVersion.getVersion().esMayorIgual(CoreVersion.v1_9)) {
 			return this.getItemInHand_1_9();
 		}else {
 			return this.getItemInHand_1_8();

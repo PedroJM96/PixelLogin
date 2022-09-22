@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.pedrojm96.core.CoreColor;
-import com.pedrojm96.core.CoreMaterial;
+import com.pedrojm96.core.CoreUtils;
 
 
 
@@ -27,6 +27,7 @@ public class SimpleGUI {
 	private boolean enableKey = true;
 	
 	private List<String> ping = new ArrayList<String>();
+	private List<String> dye = new ArrayList<String>();
 	
 	public boolean isEnableKey() {
 		return this.enableKey;
@@ -73,13 +74,14 @@ public class SimpleGUI {
 		this.menu = Bukkit.createInventory(null,this.slot, CoreColor.colorCodes(this.title));
 	}
 	public SimpleGUI(String title, int row,int glasscolor) {
+		dye();
 		this.title = title;
 		this.slot = getSlot(row);
 		this.menu = Bukkit.createInventory(null,this.slot, CoreColor.colorCodes(this.title));
 		this.color = glasscolor;
 		for (int i = 0; i < slot; i++)
 		{
-			ItemStack it = createItem(" ",CoreMaterial.pre113.STAINED_GLASS_PANE.get(),this.color);
+			ItemStack it = createItem(" ",CoreUtils.getMaterial("STAINED_GLASS_PANE",dye.get(this.color)),this.color);
 		    menu.setItem(i, it);
 		}
 		
@@ -95,63 +97,64 @@ public class SimpleGUI {
 	}
 	public void update() {
 		if(ping.size() <=0) {
-			menu.setItem(2, createItem(1,"&7*",CoreMaterial.pre113.BARRIER.get(),0));
+			menu.setItem(2, createItem(1,"&7*",Material.BARREL,0));
 		}else {
-			menu.setItem(2, createItem(1,"&a*",CoreMaterial.pre113.INK_SACK.get(),10));
+			menu.setItem(2, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=1) {
-			menu.setItem(3, createItem(1,"&7*",CoreMaterial.pre113.BARRIER.get(),0));
+			menu.setItem(3, createItem(1,"&7*",Material.BARREL,0));
 		}else {
-			menu.setItem(3, createItem(1,"&a*",CoreMaterial.pre113.INK_SACK.get(),10));
+			menu.setItem(3, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=2) {
-			menu.setItem(4, createItem(1,"&7*",CoreMaterial.pre113.BARRIER.get(),0));
+			menu.setItem(4, createItem(1,"&7*",Material.BARREL,0));
 		}else {
-			menu.setItem(4, createItem(1,"&a*",CoreMaterial.pre113.INK_SACK.get(),10));
+			menu.setItem(4, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=3) {
-			menu.setItem(5, createItem(1,"&7*",CoreMaterial.pre113.BARRIER.get(),0));
+			menu.setItem(5, createItem(1,"&7*",Material.BARREL,0));
 		}else {
-			menu.setItem(5, createItem(1,"&a*",CoreMaterial.pre113.INK_SACK.get(),10));
+			menu.setItem(5, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=4) {
-			menu.setItem(6, createItem(1,"&7*",CoreMaterial.pre113.BARRIER.get(),0));
+			menu.setItem(6, createItem(1,"&7*",Material.BARREL,0));
 		}else {
-			menu.setItem(6, createItem(1,"&a*",CoreMaterial.pre113.INK_SACK.get(),10));
+			menu.setItem(6, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		if(this.enableKey) {
-			menu.setItem(20, createItem(1,AllString.pins_numbers.get(0),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(21, createItem(1,AllString.pins_numbers.get(1),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(22, createItem(1,AllString.pins_numbers.get(2),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(23, createItem(1,AllString.pins_numbers.get(3),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(24, createItem(1,AllString.pins_numbers.get(4),CoreMaterial.pre113.INK_SACK.get(),8));
+			menu.setItem(20, createItem(1,AllString.pins_numbers.get(0),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(21, createItem(1,AllString.pins_numbers.get(1),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(22, createItem(1,AllString.pins_numbers.get(2),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(23, createItem(1,AllString.pins_numbers.get(3),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(24, createItem(1,AllString.pins_numbers.get(4),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
 		    
-		    menu.setItem(29, createItem(1,AllString.pins_numbers.get(5),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(30, createItem(1,AllString.pins_numbers.get(6),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(31, createItem(1,AllString.pins_numbers.get(7),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(32, createItem(1,AllString.pins_numbers.get(8),CoreMaterial.pre113.INK_SACK.get(),8));
-		    menu.setItem(33, createItem(1,AllString.pins_numbers.get(9),CoreMaterial.pre113.INK_SACK.get(),8));
+		    menu.setItem(29, createItem(1,AllString.pins_numbers.get(5),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(30, createItem(1,AllString.pins_numbers.get(6),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(31, createItem(1,AllString.pins_numbers.get(7),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(32, createItem(1,AllString.pins_numbers.get(8),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(33, createItem(1,AllString.pins_numbers.get(9),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
 		}else {
-			menu.setItem(20, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(21, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(22, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(23, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(24, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
+			menu.setItem(20, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(21, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(22, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(23, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(24, createItem(1," ",Material.BARREL,0));
 		    
-		    menu.setItem(29, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(30, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(31, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(32, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
-		    menu.setItem(33, createItem(1," ",CoreMaterial.pre113.BARRIER.get(),0));
+		    menu.setItem(29, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(30, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(31, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(32, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(33, createItem(1," ",Material.BARREL,0));
 		}
-	    menu.setItem(48, createItem(1,AllString.pin_backspace,CoreMaterial.pre113.CLAY_BALL.get(),0));
-	    menu.setItem(50, createItem(1,AllString.pin_ok,CoreMaterial.pre113.CLAY_BALL.get(),0));
+	    menu.setItem(48, createItem(1,AllString.pin_backspace, Material.CLAY_BALL,0));
+	    menu.setItem(50, createItem(1,AllString.pin_ok,Material.CLAY_BALL,0));
 	}
 
+	@SuppressWarnings("deprecation")
 	public static ItemStack createItem(String name,List<String> lore,String mate,int shrt) {
 		ItemStack i = new ItemStack(Material.getMaterial(mate),1,(short)shrt);
 		ItemMeta im = i.getItemMeta();
@@ -163,6 +166,7 @@ public class SimpleGUI {
 		return i;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static ItemStack createItem(String name,Material mate,int shrt) {
 		ItemStack i = new ItemStack(mate,1,(short)shrt);
 		ItemMeta im = i.getItemMeta();
@@ -172,6 +176,7 @@ public class SimpleGUI {
 		return i;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static ItemStack createItem(int amount ,String name,Material mate,int shrt) {
 		ItemStack i = new ItemStack(mate,amount,(short)shrt);
 		ItemMeta im = i.getItemMeta();
@@ -192,6 +197,42 @@ public class SimpleGUI {
 	    	 int s = rows * 9;
 	    	 return s;
 	     }
+	}
+	
+	
+	private void dye() {
+		//0
+		dye.add("WHITE_STAINED_GLASS_PANE");
+		//1
+		dye.add("ORANGE_STAINED_GLASS_PANE");
+		//2
+		dye.add("MAGENTA_STAINED_GLASS_PANE");
+		//3
+		dye.add("LIGHT_BLUE_STAINED_GLASS_PANE");
+		//4
+		dye.add("YELLOW_STAINED_GLASS_PANE");
+		//5
+		dye.add("LIME_STAINED_GLASS_PANE");
+		//6
+		dye.add("PINK_STAINED_GLASS_PANE");
+		//7
+		dye.add("GRAY_STAINED_GLASS_PANE");
+		//8
+		dye.add("LIGHT_GRAY_STAINED_GLASS_PANE");
+		//9
+		dye.add("CYAN_STAINED_GLASS_PANE");
+		//10
+		dye.add("PURPLE_STAINED_GLASS_PANE");
+		//11
+		dye.add("BLUE_STAINED_GLASS_PANE");
+		//12
+		dye.add("BROWN_STAINED_GLASS_PANE");
+		//13
+		dye.add("GREEN_STAINED_GLASS_PANE");
+		//14
+		dye.add("RED_STAINED_GLASS_PANE");
+		//15
+		dye.add("BLACK_STAINED_GLASS_PANE");
 	}
 	
 }

@@ -232,6 +232,7 @@ public class ChannelController{
 				
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void onLoadPluginMessage(String json) {
 		JsonObject obj = new JsonParser().parse(json).getAsJsonObject();
 		AllString.load(obj);

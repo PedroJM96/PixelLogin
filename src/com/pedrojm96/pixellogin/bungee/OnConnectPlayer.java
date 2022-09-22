@@ -46,6 +46,7 @@ public class OnConnectPlayer {
 		return proxiedProfile.isPremiun() && plugin.config.getBoolean("premium-auto-login");
 	}
 	
+	@SuppressWarnings("deprecation")
 	public void fullLogin(ServerConnectEvent e) {
 		
 		proxiedProfile.setLogin(true);
@@ -89,6 +90,7 @@ public class OnConnectPlayer {
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	public boolean isSessionActive() {
 		if(plugin.config.getBoolean("session.enable")) {
 			if(proxiedProfile.getSession().isActive(proxiedPlayer.getAddress().getAddress().getHostAddress())) {
@@ -102,6 +104,7 @@ public class OnConnectPlayer {
 	}
 	
 	
+	@SuppressWarnings("deprecation")
 	public boolean isSessionPinActive() {
 		if(plugin.config.getBoolean("session.enable") && plugin.config.getBoolean("session.session-pin")) {
 			if(proxiedProfile.getSession().isActive(proxiedPlayer.getAddress().getAddress().getHostAddress())) {

@@ -25,6 +25,7 @@ public class BukkitDeliverCallback implements DeliverCallback{
 	}
 	
 	 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void handle(String consumerTag, Delivery delivery) throws IOException {
 		// TODO Auto-generated method stub

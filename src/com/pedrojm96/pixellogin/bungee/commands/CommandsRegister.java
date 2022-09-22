@@ -26,6 +26,7 @@ public class CommandsRegister extends CoreCommand{
 		this.plugin.log.info("Register command /register");
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCommand(CommandSender sender, String[] arg) {
 		// TODO Auto-generated method stub

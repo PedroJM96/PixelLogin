@@ -35,6 +35,7 @@ import com.pedrojm96.pixellogin.bukkit.MessagingManager.MessagingServiceType;
 
 
 
+@SuppressWarnings("deprecation")
 public class PixelBukkitListener implements Listener{
 
 	public PixelLoginBukkit plugin;
