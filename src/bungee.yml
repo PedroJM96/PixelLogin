@@ -1,5 +1,5 @@
 name: PixelLogin
 main: com.pedrojm96.pixellogin.bungee.PixelLoginBungee
-version: 2.1.1
+version: 2.1.3
 author: PedroJM96
 description: Advanced login plugin for cracked servers.

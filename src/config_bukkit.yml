@@ -30,14 +30,16 @@ debug: false
 #Check for updates.
 update-check: true
 
+#The name of the server.
 server-name: none
 
-# - Possible options: pluginmsg, rabbitmq
+#Possible options: pluginmsg, rabbitmq
 messaging-service: pluginmsg
 
 #To clean the chat when entering the server.
 join-clear-chat: true
 
+#The sound use with the plugin.
 sound:
   enable: true
   register-command: LEVEL_UP

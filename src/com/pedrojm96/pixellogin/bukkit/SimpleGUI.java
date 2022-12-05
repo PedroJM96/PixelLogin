@@ -8,10 +8,9 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
 import com.pedrojm96.core.CoreColor;
-import com.pedrojm96.core.CoreUtils;
+import com.pedrojm96.core.CoreMaterial;
 
 
 
@@ -81,7 +80,7 @@ public class SimpleGUI {
 		this.color = glasscolor;
 		for (int i = 0; i < slot; i++)
 		{
-			ItemStack it = createItem(" ",CoreUtils.getMaterial("STAINED_GLASS_PANE",dye.get(this.color)),this.color);
+			ItemStack it = CoreMaterial.createItem(" ",CoreMaterial.getMaterial("STAINED_GLASS_PANE",dye.get(this.color)),this.color);
 		    menu.setItem(i, it);
 		}
 		
@@ -97,94 +96,64 @@ public class SimpleGUI {
 	}
 	public void update() {
 		if(ping.size() <=0) {
-			menu.setItem(2, createItem(1,"&7*",Material.BARREL,0));
+			menu.setItem(2, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
 		}else {
-			menu.setItem(2, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
+			menu.setItem(2, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=1) {
-			menu.setItem(3, createItem(1,"&7*",Material.BARREL,0));
+			menu.setItem(3, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
 		}else {
-			menu.setItem(3, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
+			menu.setItem(3, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=2) {
-			menu.setItem(4, createItem(1,"&7*",Material.BARREL,0));
+			menu.setItem(4, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
 		}else {
-			menu.setItem(4, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
+			menu.setItem(4, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=3) {
-			menu.setItem(5, createItem(1,"&7*",Material.BARREL,0));
+			menu.setItem(5, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
 		}else {
-			menu.setItem(5, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
+			menu.setItem(5, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=4) {
-			menu.setItem(6, createItem(1,"&7*",Material.BARREL,0));
+			menu.setItem(6, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
 		}else {
-			menu.setItem(6, createItem(1,"&a*",CoreUtils.getMaterial("INK_SACK","INK_SAC"),10));
+			menu.setItem(6, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		if(this.enableKey) {
-			menu.setItem(20, createItem(1,AllString.pins_numbers.get(0),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(21, createItem(1,AllString.pins_numbers.get(1),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(22, createItem(1,AllString.pins_numbers.get(2),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(23, createItem(1,AllString.pins_numbers.get(3),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(24, createItem(1,AllString.pins_numbers.get(4),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+			menu.setItem(20, CoreMaterial.createItem(1,AllString.pins_numbers.get(0),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(21, CoreMaterial.createItem(1,AllString.pins_numbers.get(1),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(22, CoreMaterial.createItem(1,AllString.pins_numbers.get(2),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(23, CoreMaterial.createItem(1,AllString.pins_numbers.get(3),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(24, CoreMaterial.createItem(1,AllString.pins_numbers.get(4),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
 		    
-		    menu.setItem(29, createItem(1,AllString.pins_numbers.get(5),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(30, createItem(1,AllString.pins_numbers.get(6),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(31, createItem(1,AllString.pins_numbers.get(7),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(32, createItem(1,AllString.pins_numbers.get(8),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
-		    menu.setItem(33, createItem(1,AllString.pins_numbers.get(9),CoreUtils.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(29, CoreMaterial.createItem(1,AllString.pins_numbers.get(5),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(30, CoreMaterial.createItem(1,AllString.pins_numbers.get(6),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(31, CoreMaterial.createItem(1,AllString.pins_numbers.get(7),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(32, CoreMaterial.createItem(1,AllString.pins_numbers.get(8),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
+		    menu.setItem(33, CoreMaterial.createItem(1,AllString.pins_numbers.get(9),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
 		}else {
-			menu.setItem(20, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(21, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(22, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(23, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(24, createItem(1," ",Material.BARREL,0));
+			menu.setItem(20, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(21, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(22, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(23, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(24, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
 		    
-		    menu.setItem(29, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(30, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(31, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(32, createItem(1," ",Material.BARREL,0));
-		    menu.setItem(33, createItem(1," ",Material.BARREL,0));
+		    menu.setItem(29, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(30, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(31, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(32, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(33, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
 		}
-	    menu.setItem(48, createItem(1,AllString.pin_backspace, Material.CLAY_BALL,0));
-	    menu.setItem(50, createItem(1,AllString.pin_ok,Material.CLAY_BALL,0));
+	    menu.setItem(48, CoreMaterial.createItem(1,AllString.pin_backspace, Material.CLAY_BALL,0));
+	    menu.setItem(50, CoreMaterial.createItem(1,AllString.pin_ok,Material.CLAY_BALL,0));
 	}
 
-	@SuppressWarnings("deprecation")
-	public static ItemStack createItem(String name,List<String> lore,String mate,int shrt) {
-		ItemStack i = new ItemStack(Material.getMaterial(mate),1,(short)shrt);
-		ItemMeta im = i.getItemMeta();
-		name = CoreColor.colorCodes(name);
-		im.setDisplayName(name);
-		lore = CoreColor.rColorList(lore);
-		im.setLore(lore);
-		i.setItemMeta(im);
-		return i;
-	}
-	
-	@SuppressWarnings("deprecation")
-	public static ItemStack createItem(String name,Material mate,int shrt) {
-		ItemStack i = new ItemStack(mate,1,(short)shrt);
-		ItemMeta im = i.getItemMeta();
-		String n = CoreColor.colorCodes(name);
-		im.setDisplayName(n);
-		i.setItemMeta(im);
-		return i;
-	}
-	
-	@SuppressWarnings("deprecation")
-	public static ItemStack createItem(int amount ,String name,Material mate,int shrt) {
-		ItemStack i = new ItemStack(mate,amount,(short)shrt);
-		ItemMeta im = i.getItemMeta();
-		String n = CoreColor.colorCodes(name);
-		im.setDisplayName(n);
-		i.setItemMeta(im);
-		return i;
-	}
+
 	
 	public int getSlot(int rows){
 		if (rows <= 0) {
@@ -198,7 +167,6 @@ public class SimpleGUI {
 	    	 return s;
 	     }
 	}
-	
 	
 	private void dye() {
 		//0

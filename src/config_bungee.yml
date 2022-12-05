@@ -42,6 +42,8 @@ messages: 'EN'
 #Encryption method used for the password and the pin code. (MD5, SHA256, SHA512).
 encryption-method: 'MD5'
 
+#To enable captcha when registering for the first time.
+#Requires the plugin installed on the bukkit/spigot server simultaneously with BungeeCord.
 captcha-code: false
 
 #Name of the server where the player will be sent.
@@ -95,6 +97,8 @@ data-storage:
   database: minecraft
   username: root
   password: 1234
+
+#For the communication rabbit messaging service between servers.
 rabbitmq:
   enable: false
   host: 'localhost'
