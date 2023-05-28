@@ -172,6 +172,12 @@ public class ChannelController {
 		
 		String token =  CoreEncryption.generateRandomText(64);
 		ProxiedProfile plogin = this.plugin.proxiedProfile.get(player.getName());
+		
+		if(plogin==null) {
+			plugin.log.debug("* ["+player.getName()+"] - Error al solicitar datos desde el bukkit, el jugador aun no se sincroniza.");
+			return;
+		}
+		
 		if(plogin.isRegistered()) {
 				plugin.data.update(CoreSQL.WHERE("uuid:"+player.getUniqueId().toString()),"login:"+ (plogin.isLogin()?"1":"0")   ,"pin_login:"+ (plogin.isPinLogin()?"1":"0") ,"token:"+CoreEncryption.valueOf(plogin.getHash()).encrypt(token));
 				plugin.messagingManager.sendToBukkit(player,"player-profile", token , player.getServer().getInfo());

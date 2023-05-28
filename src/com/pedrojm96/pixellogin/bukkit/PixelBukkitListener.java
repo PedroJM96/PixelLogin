@@ -641,7 +641,7 @@ public class PixelBukkitListener implements Listener{
     				plugin.messagingManager.sendToBungeeCord(player, "get-messages", String.valueOf(true));
 	    		}
 	        }
-	    }, start,20L).getTaskId());
+	    }, start,40L).getTaskId());
 		;
 	}
 	  
