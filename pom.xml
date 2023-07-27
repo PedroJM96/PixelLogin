@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.pedrojm96</groupId>
   <artifactId>PixelLogin</artifactId>
-  <version>2.1.4</version>
+  <version>2.1.5</version>
   <name>PixelLogin</name>
   <description>Advanced login plugin for cracked servers.</description>
   <properties>
@@ -10,8 +10,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
-  
-  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
@@ -121,7 +119,7 @@
       
     </plugins>
   </build>
-  <repositories>
+<repositories>
 	<!--Spigot API-->
     <repository>
         <id>spigot-repo</id>
@@ -140,16 +138,16 @@
 	
 
   </repositories>
-  
+
   <dependencies>
-    <!--Spigot API-->
-    <dependency>
+   <!--Spigot API-->
+   <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.8.8-R0.1-SNAPSHOT</version>
+      <version>1.19-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
-    <!--Bungeecord API-->
+<!--Bungeecord API-->
     <dependency>
        <groupId>net.md-5</groupId>
        <artifactId>bungeecord-api</artifactId>
@@ -242,5 +240,6 @@
      </dependency>
      
   </dependencies>
+
   
 </project>
