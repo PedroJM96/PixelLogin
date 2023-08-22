@@ -1,5 +1,5 @@
 name: PixelLoginBukkit
-version: 2.1.5
+version: 2.1.6
 main: com.pedrojm96.pixellogin.bukkit.PixelLoginBukkit
 api-version: 1.13
 description: Advanced login plugin for cracked servers.
