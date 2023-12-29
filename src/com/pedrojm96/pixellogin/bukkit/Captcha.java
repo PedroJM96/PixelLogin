@@ -18,9 +18,11 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.MapMeta;
 import org.bukkit.map.MapRenderer;
 import org.bukkit.map.MapView;
 
+import com.pedrojm96.core.CoreMaterial;
 import com.pedrojm96.core.CoreVersion;
 import com.pedrojm96.core.bungee.CoreColor;
 
@@ -95,7 +97,7 @@ public class Captcha{
      }
 
 	@SuppressWarnings("deprecation")
-	private void sendMap(Player player) {
+	private void sendMapPre1_13(Player player) {
 		
 		 this.contents = player.getInventory().getContents();
 	     this.armour = player.getInventory().getArmorContents();
@@ -110,10 +112,46 @@ public class Captcha{
 		 meta.setDisplayName(CoreColor.colorCodes("&aCaptcha"));
 		 map.setDurability((short) view.getId());
 		 map.setItemMeta(meta); 
+		 
+		 player.updateInventory();
+		 
+	}
+	
+	private void sendMap(Player player) {
+		
+		 if(CoreVersion.getVersion().esMayorIgual(CoreVersion.v1_13)) {
+			 sendMapPos1_13(player);
+		 }else {
+			 sendMapPre1_13(player);
+		 }
+		 
+	}
+	
+	
+	@SuppressWarnings("deprecation")
+	private void sendMapPos1_13(Player player) {
+		
+		 this.contents = player.getInventory().getContents();
+	     this.armour = player.getInventory().getArmorContents();
+		 this.player.getInventory().clear();
+		 this.player.getInventory().setArmorContents(null);
+		 ItemStack map = new ItemStack(CoreMaterial.getMaterial("FILLED_MAP"));
+		 MapView view = Bukkit.createMap(player.getWorld());
+		 MapMeta mapMeta = (MapMeta)map.getItemMeta();
+		 mapMeta.setMapId(view.getId());
+		 map.setItemMeta(mapMeta);
+		 List<MapRenderer> old = view.getRenderers();
+		 view.getRenderers().clear();
+		 view.addRenderer(new CaptchaRender(this.plugin,old,view));
+		 ItemMeta meta = map.getItemMeta();
+		 meta.setDisplayName(CoreColor.colorCodes("&aCaptcha"));
+		 map.setDurability((short) view.getId());
+		 map.setItemMeta(meta); 
 		 this.setItemInHand(map);
 		 player.updateInventory();
 		 
 	}
+	
 	
 	public void setItemInHand(ItemStack item) {
 		if(CoreVersion.getVersion().esMayorIgual(CoreVersion.v1_9)) {

@@ -96,31 +96,31 @@ public class SimpleGUI {
 	}
 	public void update() {
 		if(ping.size() <=0) {
-			menu.setItem(2, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
+			menu.setItem(2, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER"),0));
 		}else {
 			menu.setItem(2, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=1) {
-			menu.setItem(3, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
+			menu.setItem(3, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER"),0));
 		}else {
 			menu.setItem(3, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=2) {
-			menu.setItem(4, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
+			menu.setItem(4, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER"),0));
 		}else {
 			menu.setItem(4, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=3) {
-			menu.setItem(5, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
+			menu.setItem(5, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER"),0));
 		}else {
 			menu.setItem(5, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
 		
 		if(ping.size() <=4) {
-			menu.setItem(6, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER "),0));
+			menu.setItem(6, CoreMaterial.createItem(1,"&7*",CoreMaterial.getMaterial("BARRIER"),0));
 		}else {
 			menu.setItem(6, CoreMaterial.createItem(1,"&a*",CoreMaterial.getMaterial("INK_SACK","INK_SAC"),10));
 		}
@@ -137,17 +137,17 @@ public class SimpleGUI {
 		    menu.setItem(32, CoreMaterial.createItem(1,AllString.pins_numbers.get(8),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
 		    menu.setItem(33, CoreMaterial.createItem(1,AllString.pins_numbers.get(9),CoreMaterial.getMaterial("INK_SACK","INK_SAC"),8));
 		}else {
-			menu.setItem(20, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(21, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(22, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(23, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(24, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+			menu.setItem(20, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(21, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(22, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(23, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(24, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
 		    
-		    menu.setItem(29, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(30, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(31, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(32, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
-		    menu.setItem(33, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER "),0));
+		    menu.setItem(29, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(30, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(31, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(32, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
+		    menu.setItem(33, CoreMaterial.createItem(1," ",CoreMaterial.getMaterial("BARRIER"),0));
 		}
 	    menu.setItem(48, CoreMaterial.createItem(1,AllString.pin_backspace, Material.CLAY_BALL,0));
 	    menu.setItem(50, CoreMaterial.createItem(1,AllString.pin_ok,Material.CLAY_BALL,0));

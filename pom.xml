@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.pedrojm96</groupId>
   <artifactId>PixelLogin</artifactId>
-  <version>2.1.6</version>
+  <version>2.1.8</version>
   <name>PixelLogin</name>
   <description>Advanced login plugin for cracked servers.</description>
   <properties>
@@ -34,7 +34,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.3.0-SNAPSHOT</version>
+        <version>3.5.0</version>
         <executions>
             <execution>
                 <phase>package</phase>
@@ -166,7 +166,7 @@
      <dependency>
       <groupId>com.zaxxer</groupId>
       <artifactId>HikariCP</artifactId>
-      <version>3.4.1</version>
+      <version>4.0.3</version>
       <scope>compile</scope>
      </dependency>
      <!--Slf4j-->
